@@ -13,4 +13,3 @@ if __name__ == "__main__":
         print("{:d} arguments:".format(dumbed - 1))
     for i in range(1, dumbed):
         print("{:d}: {:s}".format(i, sys.argv[i]))
-

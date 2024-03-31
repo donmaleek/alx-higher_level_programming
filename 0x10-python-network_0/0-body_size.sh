@@ -1,7 +1,5 @@
 #!/bin/bash
-# Usage: ./check_response_size.sh <URL>
-echo "$(curl -sS --output /dev/null --write-out "%{size_download}" "$1")"
-
-
+# takes in a URL, sends a request to that URL, and displays the size of the body of the response
+curl -sI "$1" | grep 'Content-Length:' | cut -d' ' -f2
 
 
